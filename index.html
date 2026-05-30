@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Personality Finder — Discover Your Inner Animal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700;800&family=Spline+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Background Elements -->
+        <div class="bg-pattern"></div>
+        <div class="floating-paws">
+            <span class="paw">🐾</span>
+            <span class="paw">🐾</span>
+            <span class="paw">🐾</span>
+            <span class="paw">🐾</span>
+            <span class="paw">🐾</span>
+        </div>
+
+        <!-- Header -->
+        <header class="app-header">
+            <div class="logo">
+                <span class="logo-icon">🐾</span>
+                <span class="logo-text">PetPersonality</span>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Landing Screen -->
+            <section id="landing-screen" class="screen active">
+                <div class="hero">
+                    <div class="hero-badge">
+                        <span class="badge-text">✨ 12 Personalities</span>
+                    </div>
+                    <h1 class="hero-title">
+                        What kind of<br>
+                        <span class="title-highlight">pet energy</span><br>
+                        are you?
+                    </h1>
+                    <p class="hero-subtitle">
+                        Answer 8 simple questions and discover which animal personality 
+                        matches your vibe. From golden retriever chaos to mysterious cat energy.
+                    </p>
+                    <div class="pet-preview">
+                        <span class="preview-emoji">🐕</span>
+                        <span class="preview-emoji">🐈</span>
+                        <span class="preview-emoji">🦊</span>
+                        <span class="preview-emoji">🦉</span>
+                        <span class="preview-emoji">🐰</span>
+                    </div>
+                    <button class="btn btn-primary btn-large" onclick="startQuiz()">
+                        <span>Start the Quiz</span>
+                        <span class="btn-arrow">→</span>
+                    </button>
+                </div>
+            </section>
+
+            <!-- Quiz Screen -->
+            <section id="quiz-screen" class="screen">
+                <div class="quiz-container">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress-fill"></div>
+                    </div>
+                    <div class="progress-text">
+                        Question <span id="current-question">1</span> of <span id="total-questions">8</span>
+                    </div>
+                    
+                    <div class="question-card" id="question-card">
+                        <h2 class="question-text" id="question-text"></h2>
+                        <div class="answers-grid" id="answers-grid"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Loading Screen -->
+            <section id="loading-screen" class="screen">
+                <div class="loading-container">
+                    <div class="loading-animation">
+                        <div class="loading-pet">🐾</div>
+                        <div class="loading-pet">🐾</div>
+                        <div class="loading-pet">🐾</div>
+                    </div>
+                    <h2 class="loading-title">Analyzing your vibes...</h2>
+                    <p class="loading-subtitle">Consulting the animal spirits</p>
+                </div>
+            </section>
+
+            <!-- Result Screen -->
+            <section id="result-screen" class="screen">
+                <div class="result-container">
+                    <div class="result-badge">Your Pet Personality</div>
+                    <div class="result-emoji" id="result-emoji"></div>
+                    <h1 class="result-title" id="result-title"></h1>
+                    <p class="result-tagline" id="result-tagline"></p>
+                    
+                    <div class="result-card">
+                        <h3 class="card-title">About Your Energy</h3>
+                        <p class="result-description" id="result-description"></p>
+                        
+                        <div class="traits-section">
+                            <h4 class="traits-title">Key Traits</h4>
+                            <div class="traits-grid" id="traits-grid"></div>
+                        </div>
+                        
+                        <div class="compatibility-section">
+                            <h4 class="compatibility-title">Best Matches</h4>
+                            <div class="compatibility-list" id="compatibility-list"></div>
+                        </div>
+                    </div>
+
+                    <div class="result-actions">
+                        <button class="btn btn-secondary" onclick="shareResult()">
+                            <span>Share Result</span>
+                        </button>
+                        <button class="btn btn-primary" onclick="retakeQuiz()">
+                            <span>Retake Quiz</span>
+                            <span class="btn-arrow">↻</span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="app-footer">
+            <p>Made with 🐾 by PetPersonality</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
